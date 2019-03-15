@@ -1,0 +1,22 @@
+<form [formGroup]="form" class="form-content" (ngSubmit)="register()">
+
+    <label for="username">邮箱或用户名</label>
+    <mat-form-field style="width:100%;">
+      <input matInput type="email" name="email" formControlName="email">
+    </mat-form-field>
+  
+    <label for="password">密 码</label>
+    <mat-form-field style="width:100%;">
+      <input matInput type="password" name="password" formControlName="password">
+    </mat-form-field>
+  
+    <label for="confirmPwd">确 认 密 码</label>
+    <mat-form-field style="width:100%;">
+      <input matInput type="password" name="confirmPwd" formControlName="confirmPwd">
+    </mat-form-field>
+  
+    <div class="form-content__button button-row">
+      <button type="submit" mat-raised-button color="primary">注册</button>
+    </div>
+    
+  </form>

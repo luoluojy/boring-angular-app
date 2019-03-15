@@ -1,0 +1,25 @@
+<form [formGroup]="form" class="form-content" (ngSubmit)="login()">
+
+  <label for="username">邮箱或用户名</label>
+  <mat-form-field style="width:100%;">
+    <input matInput type="email" name="email" formControlName="email">
+  </mat-form-field>
+
+  <label for="password">密 码</label>
+  <mat-form-field style="width:100%;">
+    <input matInput type="password" name="password" formControlName="password">
+  </mat-form-field>
+  <label class="checkbox-label">
+    <input type="checkbox" name="remember_me" class="vam" tabindex="3">
+    <span class="vam">保持登录</span>
+  </label>
+
+  <div class="form-content__button button-row">
+    <button type="submit" mat-raised-button color="primary">登录</button>
+    <button type="button" mat-raised-button (click)="routerToRegister()" color="primary">去注册</button>
+    <!-- <button type="button" mat-raised-button (click)="oauthLogin()" color="primary">第三方登录</button> -->
+    <button type="button" mat-raised-button (click)="oauthLogin()" color="primary">第三方登录</button>
+    <!-- <a href='http://localhost:4200?'>aaa</a> -->
+  </div>
+
+</form>

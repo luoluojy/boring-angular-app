@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+  --fontSize: 1rem;
+  --mainColor: #3f51b5;
+  --secondaryColor: lab(32.5 38.5 -47.6 / 90%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-image:url(assets/images/bg.png)
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--mainColor);
+  color: white;
+  height: 48px;
+  display: flex;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+
+  h2 {
+    line-height: 48px;
+    padding: 0 20px;
+    font-weight: 400;
+  }
+
+  nav {
+    height: 100%;
+    line-height: 48px;
+    display: inline-block;
+
+    a {
+      color: white;
+      padding: 0 20px;
+
+      &:last-child {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        line-height: 48px;
+      }
+    }
+  }
+}
+
+.mat-menu-panel {
+  min-width: 0 !important;
+}

@@ -1,0 +1,12 @@
+<header>
+  <nav>
+    <a [routerLink]="[ './' ]" routerLinkActive="active">Center</a>
+    <a [routerLink]="[ './manage' ]" routerLinkActive="active">Manage</a>
+    <mat-menu  #userMenu="matMenu">
+      <a  mat-menu-item href="javascript:void(0);" (click)="logout()">Logout</a>
+      <a mat-menu-item [routerLink]="[ '/home' ]" routerLinkActive="active">Home</a>
+    </mat-menu>
+    <a mat-button [matMenuTriggerFor]="userMenu">{{username$ | async}}</a>
+  </nav>
+</header>
+<router-outlet></router-outlet>

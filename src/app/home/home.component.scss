@@ -1,0 +1,13 @@
+.home-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+
+    .home-left{
+        width:300px;
+    }
+    
+    .home-right{
+        flex-grow: 1;
+    }
+}
